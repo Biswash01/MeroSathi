@@ -6,7 +6,7 @@ import Navtab from "@/components/Nav-tab/page";
 export default function teacher() {
   return (
     <><div className="min-h-screen bg-white" flex flex-col>
-    <Navbar isBordered>
+    <Navbar isBordered className=" shadow-sm">
         <NavbarContent justify="start">
           <NavbarBrand className="mr-4">
             <p className="font-bold text-black text-2xl relative right-40">SchoolSathi</p>
@@ -45,7 +45,7 @@ export default function teacher() {
               <DropdownItem className="text-black" key="system">System</DropdownItem>
               <DropdownItem className="text-black" key="configurations">Configurations</DropdownItem>
               <DropdownItem className="text-black" key="help_and_feedback">Help & Feedback</DropdownItem>
-              <DropdownItem  className="text-black bg-red-400" key="logout" color="danger">
+              <DropdownItem  className="text-black bg-red-400" key="logout" color="danger" href="/">
                 Log Out
               </DropdownItem>
             </DropdownMenu>

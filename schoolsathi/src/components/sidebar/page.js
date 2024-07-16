@@ -11,6 +11,7 @@ import { SlCalender } from "react-icons/sl";
 import Calend from '../calender/page';
 import Events from '../event/page';
 import Userc from '../dashboardcontent/page';
+import Ccontent from '../classroomcont/page';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -72,7 +73,7 @@ export default function VerticalTabs() {
         <Userc/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        yaha classroom ko kura haru
+        <Ccontent/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <div className='ml-40 mt-20 flex flex-row justify-between space-x-32' ><Calend/> <Events/></div>

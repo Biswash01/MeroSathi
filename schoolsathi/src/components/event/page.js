@@ -8,6 +8,7 @@ export default function Events() {
 
   return (
     <div className="w-full max-w-xl flex flex-col items-start gap-4">
+        <h1 className="font-bold">Schedule an event</h1>
       <DateInput
         granularity="second"
         label="Date and time"
