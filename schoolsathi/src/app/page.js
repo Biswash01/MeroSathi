@@ -16,7 +16,7 @@ export default function App() {
         <p>Dont have an account? </p>
         <Link
           isExternal
-          href=""
+          href="/register"
         >
           Signin
         </Link>

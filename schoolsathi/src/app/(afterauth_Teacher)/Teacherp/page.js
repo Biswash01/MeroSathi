@@ -45,7 +45,7 @@ export default function teacher() {
               <DropdownItem className="text-black" key="system">System</DropdownItem>
               <DropdownItem className="text-black" key="configurations">Configurations</DropdownItem>
               <DropdownItem className="text-black" key="help_and_feedback">Help & Feedback</DropdownItem>
-              <DropdownItem className="text-black" key="logout" color="danger">
+              <DropdownItem  className="text-black bg-red-400" key="logout" color="danger">
                 Log Out
               </DropdownItem>
             </DropdownMenu>

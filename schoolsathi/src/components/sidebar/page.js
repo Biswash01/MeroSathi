@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
@@ -8,6 +9,8 @@ import { MdDashboard,MdDateRange } from "react-icons/md";
 import { SiGoogleclassroom } from "react-icons/si";
 import { SlCalender } from "react-icons/sl";
 import Calend from '../calender/page';
+import Events from '../event/page';
+import Userc from '../dashboardcontent/page';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -66,13 +69,14 @@ export default function VerticalTabs() {
         <Tab icon={<MdDateRange />} label="Routine" {...a11yProps(3)} sx={{ color: 'black', fontWeight: 'bold',flexDirection: 'row'}} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Yaha dashboard ko kuraharu huncha
+        <Userc/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         yaha classroom ko kura haru
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className='ml-20'><Calend/></div>
+        <div className='ml-40 mt-20 flex flex-row justify-between space-x-32' ><Calend/> <Events/></div>
+        
       </TabPanel>
       <TabPanel value={value} index={3}>
         yaha routine huncha

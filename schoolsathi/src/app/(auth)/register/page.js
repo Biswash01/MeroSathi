@@ -19,7 +19,7 @@ const register = () => {
         <p>Already have an account? </p>
         <Link
           isExternal
-          href="https://github.com/nextui-org/nextui"
+          href="/"
         >
           Signup
         </Link>
