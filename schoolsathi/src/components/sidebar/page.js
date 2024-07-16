@@ -4,6 +4,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { MdDashboard,MdDateRange } from "react-icons/md";
+import { SiGoogleclassroom } from "react-icons/si";
+import { SlCalender } from "react-icons/sl";
+import Calend from '../calender/page';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -18,7 +22,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Typography sx={{ color: 'black' }}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -47,44 +51,31 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224 }}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', minHeight: '100vh'}}
     >
       <Tabs
         orientation="vertical"
-        variant="scrollable"
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider' }}
+        sx={{ borderRight: 1, borderColor: 'divider', width: 300,boxShadow:'0px 0px 10px black'}} 
       >
-        <Tab label="Item One" {...a11yProps(0)} />
-        <Tab label="Item Two" {...a11yProps(1)} />
-        <Tab label="Item Three" {...a11yProps(2)} />
-        <Tab label="Item Four" {...a11yProps(3)} />
-        <Tab label="Item Five" {...a11yProps(4)} />
-        <Tab label="Item Six" {...a11yProps(5)} />
-        <Tab label="Item Seven" {...a11yProps(6)} />
+        <Tab icon={<MdDashboard />} label="DashBoard" {...a11yProps(0)} sx={{ color: 'black', fontWeight: 'bold',flexDirection: 'row' }} />
+        <Tab icon={<SiGoogleclassroom />} label="Classroom" {...a11yProps(1)} sx={{ color: 'black', fontWeight: 'bold',flexDirection: 'row' }} />
+        <Tab icon={<SlCalender />} label="Calender" {...a11yProps(2)} sx={{ color: 'black', fontWeight: 'bold',flexDirection: 'row' }} />
+        <Tab icon={<MdDateRange />} label="Routine" {...a11yProps(3)} sx={{ color: 'black', fontWeight: 'bold',flexDirection: 'row'}} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Item One
+        Yaha dashboard ko kuraharu huncha
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        yaha classroom ko kura haru
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <div className='ml-20'><Calend/></div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item Five
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Six
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven
+        yaha routine huncha
       </TabPanel>
     </Box>
   );
