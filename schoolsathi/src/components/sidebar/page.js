@@ -12,6 +12,7 @@ import Calend from '../calender/page';
 import Events from '../event/page';
 import Userc from '../dashboardcontent/page';
 import Ccontent from '../classroomcont/page';
+import Routine from '../routinec/page';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -80,7 +81,7 @@ export default function VerticalTabs() {
         
       </TabPanel>
       <TabPanel value={value} index={3}>
-        yaha routine huncha
+        <Routine/>
       </TabPanel>
     </Box>
   );
